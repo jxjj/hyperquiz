@@ -1,18 +1,18 @@
 {
-  "name": "hyperapp-one",
-  "version": "1.0.1",
+  "name": "hyperquiz",
+  "version": "0.1.0",
   "description": "Minimal web app",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "rm -rf build && webpack -p --config webpack.config.prod.js",
-    "wipe": "rm -rf .git && git init && git add . && git commit -m 'initial commit'",
     "deploy": "./scripts/gh_pages.sh",
     "test": "jest --coverage --no-cache"
   },
-  "author": "Regis Boudinot (selfup)",
+  "author": "James Johnson <johnsojr@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@hyperapp/router": "^0.7.1",
     "hyperapp": "^1.2.9",
     "hyperapp-redux-devtools": "^1.1.6"
   },

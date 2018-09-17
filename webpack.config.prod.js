@@ -10,7 +10,7 @@ const OUTPUT_DIR = './build';
 
 const plugins = [
   new HtmlWebpackPlugin({
-    title: 'Hyperapp One',
+    title: 'HyperQuiz',
     template: './src/index.html',
     filename: path.join(__dirname, './index.html'),
   }),
@@ -27,10 +27,7 @@ const plugins = [
 ];
 
 module.exports = () => ({
-  entry: [
-    './src/index.js',
-    './styles/app.css',
-  ],
+  entry: ['./src/index.js'],
   output: {
     filename: '[name].[hash].js',
     path: path.resolve(__dirname, OUTPUT_DIR),
@@ -40,9 +37,7 @@ module.exports = () => ({
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [
-          path.resolve(__dirname, './'),
-        ],
+        include: [path.resolve(__dirname, './')],
       },
       {
         test: /\.css$/,
