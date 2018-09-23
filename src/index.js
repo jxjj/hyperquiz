@@ -1,24 +1,19 @@
 import { app } from 'hyperapp';
 import { location } from '@hyperapp/router';
+import { withFx } from '@hyperapp/fx';
+import devtools from 'hyperapp-redux-devtools';
+import { pipe } from 'ramda';
 import actions from './actions';
 import state from './state';
 import view from './components/App';
 
-const appArgs = [state, actions, view, document.body];
-
 function onMount(main) {
-  const unsubscribe = location.subscribe(main.location);
-  console.log(unsubscribe);
+  location.subscribe(main.location);
 }
 
-let main;
+const main = pipe(
+  devtools,
+  withFx,
+)(app)(state, actions, view, document.body);
 
-if (process.env.NODE_ENV !== 'production') {
-  import('hyperapp-redux-devtools').then((devtools) => {
-    main = devtools(app)(...appArgs);
-    onMount(main);
-  });
-} else {
-  main = app(...appArgs);
-  onMount(main);
-}
+onMount(main);

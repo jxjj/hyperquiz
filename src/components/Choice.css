@@ -1,0 +1,35 @@
+.choice {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: transparent;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+.choice[disabled],
+.choice[disabled]:hover {
+  color: #ccc;
+  border-color: #ccc;
+  background: transparent;
+}
+.choice:hover {
+  background: #333;
+  color: white;
+}
+
+.choice.is-selected,
+.choice.is-selected:hover {
+  background: yellow;
+  color: black;
+  border: 2px solid black;
+}
+.choice.is-incorrect,
+.choice.is-incorrect:hover {
+  background: red;
+  color: white;
+}
+
+.choice.is-correct,
+.choice.is-correct:hover {
+  background: green;
+  color: white;
+}

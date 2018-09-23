@@ -1,33 +1,21 @@
-import { h } from 'hyperapp';
-import { Link, Route, Switch } from '@hyperapp/router';
+import { h } from "hyperapp";
+import { Route, Switch } from "@hyperapp/router";
+import HomePage from "./HomePage";
+import QuestionPage from "./QuestionPage";
+import ResultsPage from "./ResultsPage";
 
-const Home = () => <h2>Home</h2>;
-const About = () => <h2>About</h2>;
-const Topic = () => <h2>Topic</h2>;
-
-export default () => (
-  <div id="app">
+export default () => (state, actions) => (
+  <div id="app" oncreate={() => actions.loadTriviaQuestions()}>
     <header class="app-bar">HyperQuiz</header>
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/topics">Topics</Link>
-        </li>
-      </ul>
-
-      <hr />
+    {!state.ready ? (
+      "Loading..."
+    ) : (
       <Switch>
-        <Route path="/" render={Home} />
-        <Route path="/about" render={About} />
-        <Route path="/topics" render={Topic} />
-        <Route render={Home} />
+        <Route path="/" render={HomePage} />
+        <Route path="/q/:num" render={QuestionPage} />
+        <Route path="/results" render={ResultsPage} />
+        <Route render={HomePage} />
       </Switch>
-    </div>
+    )}
   </div>
 );
