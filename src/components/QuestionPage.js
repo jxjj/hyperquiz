@@ -25,15 +25,20 @@ const renderNextLink = (questionNum, state) => {
   }
 };
 
-export default ({ match }) => state => {
+export default ({ match }) => (state, actions) => {
   const { num } = match.params;
   const numInt = Number.parseInt(num, 10);
   const questionItem = state.questionPool[num];
+
+  // if no question found, redirect to start page
+  if (!num || !questionItem) {
+    console.log("no questions loaded");
+    return <p>...</p>;
+  }
+
   const { category, question, difficulty, choices } = questionItem;
   const choice = getChoiceForQuestion(num, state);
   const isComplete = isQuestionComplete(num, state);
-
-  if (!num || !questionItem) return <div>Loading...</div>;
 
   return (
     <div class="question-page">
