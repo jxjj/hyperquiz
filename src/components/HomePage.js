@@ -1,11 +1,8 @@
-import { h } from 'hyperapp';
-import { Link } from '@hyperapp/router';
+import { h } from "hyperapp";
+import { Link } from "@hyperapp/router";
 
-export default () => state =>
-  (state.questionPool.length ? (
-    <div class="home-page">
-      <Link to="/q/0">Start Game</Link>
-    </div>
-  ) : (
-    <div class="home-page">Loading...</div>
-  ));
+export default () => (state, actions) => (
+  <div class="home-page">
+    <button onclick={() => actions.startNewGame()}>Start New Game</button>
+  </div>
+);

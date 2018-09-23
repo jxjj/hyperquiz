@@ -22,10 +22,10 @@ export default {
   },
 
   ready: () => ({ ready: true }),
-  loadNewGame: () => async (state, actions) => {
+  startNewGame: () => async (state, actions) => {
     actions.reset();
     await actions.fetchTriviaQuestions();
-    actions.ready();
+    actions.location.go("/q/1");
   },
 
   reset: () => ({ ...initialState })
