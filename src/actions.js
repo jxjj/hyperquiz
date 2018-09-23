@@ -2,10 +2,16 @@ import { location } from "@hyperapp/router";
 import data from "./data/triviaQuestions";
 import getRandomIntInclusive from "./helpers/getRandomIntInclusive";
 import htmlEntities from "he";
+import initialState from "./state";
 // import * as C from './constants';
 
+// const fetchTrivia = () =>
+//   new Promise(resolve => setTimeout(() => resolve(data), 1000));
+
 const fetchTrivia = () =>
-  new Promise(resolve => setTimeout(() => resolve(data), 1000));
+  fetch("https://opentdb.com/api.php?amount=5&type=multiple").then(res =>
+    res.json()
+  );
 
 const normalizeTriviaItem = item => {
   // eslint-disable-next-line camelcase
@@ -35,12 +41,10 @@ const normalizeTriviaItem = item => {
 export default {
   location: location.actions,
 
-  loadTriviaQuestions: () => async (state, actions) => {
+  fetchTriviaQuestions: () => async (state, actions) => {
     const { results } = await fetchTrivia();
     const questionPool = results.map(normalizeTriviaItem);
-
     actions.createQuestionPool(questionPool);
-    actions.ready();
   },
 
   createQuestionPool: questionPool => ({ questionPool }),
@@ -54,5 +58,12 @@ export default {
     return { answers };
   },
 
-  ready: () => ({ ready: true })
+  ready: () => ({ ready: true }),
+  loadNewGame: () => async (state, actions) => {
+    actions.reset();
+    await actions.fetchTriviaQuestions();
+    actions.ready();
+  },
+
+  reset: () => ({ ...initialState })
 };

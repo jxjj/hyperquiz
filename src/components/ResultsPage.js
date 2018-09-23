@@ -7,6 +7,8 @@ export default () => (state, actions) => (
     <h1>Final Score</h1>
 
     <p>{getScore(state)}</p>
-    <Link to="/">Play Again</Link>
+    <Link to="/" onclick={() => actions.loadNewGame()}>
+      Play Again
+    </Link>
   </div>
 );

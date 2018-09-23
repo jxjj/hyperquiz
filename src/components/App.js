@@ -5,7 +5,7 @@ import QuestionPage from "./QuestionPage";
 import ResultsPage from "./ResultsPage";
 
 export default () => (state, actions) => (
-  <div id="app" oncreate={() => actions.loadTriviaQuestions()}>
+  <div id="app" oncreate={() => actions.loadNewGame()}>
     <header class="app-bar">HyperQuiz</header>
     {!state.ready ? (
       "Loading..."
