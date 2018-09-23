@@ -3,7 +3,7 @@
 export default function shuffle(origArray) {
   const array = [...origArray];
 
-  for (let remaining = array.length; remaining > 0; remaining--) {
+  for (let remaining = array.length; remaining > 0; remaining -= 1) {
     // Pick a remaining element…
     const i = Math.floor(Math.random() * remaining);
 

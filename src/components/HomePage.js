@@ -1,5 +1,4 @@
-import { h } from "hyperapp";
-import { Link } from "@hyperapp/router";
+import { h } from 'hyperapp';
 
 export default () => (state, actions) => (
   <div class="home-page">

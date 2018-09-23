@@ -1,6 +1,5 @@
-import { h } from "hyperapp";
-import { Link } from "@hyperapp/router";
-import getScore from "../helpers/getScore";
+import { h } from 'hyperapp';
+import getScore from '../helpers/getScore';
 
 export default () => (state, actions) => (
   <div class="results-page">

@@ -1,28 +1,45 @@
-import { decode } from "he";
-import shuffle from "./shuffle";
+import { decode } from 'he';
+import { pipe } from 'ramda';
+import shuffle from './shuffle';
 
-function decodeHTMLEntities(item) {
-  const { correct_answer, incorrect_answers, question, ...rest } = item;
+function decodeHTMLEntities({
+  question, correctAnswer, incorrectAnswers, ...rest
+}) {
   return {
     ...rest,
     question: decode(question),
-    correctAnswer: decode(correct_answer),
-    incorrectAnswers: incorrect_answers.map(decode)
+    correctAnswer: decode(correctAnswer),
+    incorrectAnswers: incorrectAnswers.map(decode),
+  };
+}
+
+// eslint-disable-next-line camelcase
+function camelCasedProps({ incorrect_answers, correct_answer, ...rest }) {
+  return {
+    ...rest,
+    correctAnswer: correct_answer,
+    incorrectAnswers: incorrect_answers,
   };
 }
 
 function normalizeTriviaItem(origItem) {
-  const item = decodeHTMLEntities(origItem);
+  // clean up data from API
+  const item = pipe(
+    camelCasedProps,
+    decodeHTMLEntities,
+  )(origItem);
+
+  // add randomized choices array
   const choices = shuffle([item.correctAnswer, ...item.incorrectAnswers]);
 
   return {
     ...item,
-    choices
+    choices,
   };
 }
 
 export default function fetchTrivia() {
-  return fetch("https://opentdb.com/api.php?amount=5&type=multiple")
+  return fetch('https://opentdb.com/api.php?amount=5&type=multiple')
     .then(res => res.json())
     .then(json => json.results.map(normalizeTriviaItem));
 }

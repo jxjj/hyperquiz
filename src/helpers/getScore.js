@@ -1,4 +1,4 @@
-export default state => {
+export default (state) => {
   const { questionPool, answers } = state;
 
   // loop thru answers and tally up total points accumulated

@@ -1,8 +1,8 @@
-import { h } from "hyperapp";
-import isQuestionComplete from "../helpers/isQuestionComplete";
-import getChoiceForQuestion from "../helpers/getChoiceForQuestion";
-import getCorrectAnswerForQuestion from "../helpers/getCorrectAnswerForQuestion";
-import Choice from "./Choice";
+import { h } from 'hyperapp';
+import isQuestionComplete from '../helpers/isQuestionComplete';
+import getChoiceForQuestion from '../helpers/getChoiceForQuestion';
+import getCorrectAnswerForQuestion from '../helpers/getCorrectAnswerForQuestion';
+import Choice from './Choice';
 
 export default ({ questionNum }) => (state, actions) => {
   const { choices } = state.questionPool[questionNum];

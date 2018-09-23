@@ -1,8 +1,8 @@
-import { location } from "@hyperapp/router";
-import fetchTrivia from "./helpers/fetchTrivia";
-import initialState from "./state";
+import { location } from '@hyperapp/router';
+import fetchTrivia from './helpers/fetchTrivia';
+import initialState from './state';
 
-const LOCALSTORAGE_KEY = "hyperquiz/v1";
+const LOCALSTORAGE_KEY = 'hyperquiz/v1';
 
 export default {
   location: location.actions,
@@ -21,7 +21,7 @@ export default {
   submitAnswer: ({ questionNum, choice }) => (state, actions) => {
     const answers = {
       ...state.answers,
-      [questionNum]: choice
+      [questionNum]: choice,
     };
     actions.update({ answers });
     actions.saveState();
@@ -32,7 +32,7 @@ export default {
   startNewGame: () => async (state, actions) => {
     actions.reset();
     await actions.fetchTriviaQuestions();
-    actions.location.go("/q/0");
+    actions.location.go('/q/0');
   },
 
   reset: () => ({ ...initialState }),
@@ -42,6 +42,7 @@ export default {
       const serializedState = JSON.stringify({ questionPool, answers });
       sessionStorage.setItem(LOCALSTORAGE_KEY, serializedState);
     } catch (err) {
+      // eslint-disable-next-line no-console
       console.error(err);
     }
   },
@@ -52,7 +53,9 @@ export default {
       const savedState = JSON.parse(serializedState);
       return savedState;
     } catch (err) {
+      // eslint-disable-next-line no-console
       console.error(err);
+      return undefined;
     }
-  }
+  },
 };
