@@ -32,8 +32,8 @@ const normalizeTriviaItem = item => {
   return {
     ...rest,
     question: questionCleaned,
-    correctAnswer: correct_answer,
-    incorrectAnswers: incorrect_answers,
+    correctAnswer,
+    incorrectAnswers,
     choices
   };
 };
