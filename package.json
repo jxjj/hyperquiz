@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "rm -rf dist && webpack -p --config webpack.config.prod.js",
-    "deploy": "./scripts/gh_pages.sh",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint --fix ."
   },
   "author": "James Johnson <johnsojr@gmail.com>",
@@ -39,6 +39,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
+    "gh-pages": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "parcel-bundler": "^1.9.7",
     "prettier": "^1.14.3",

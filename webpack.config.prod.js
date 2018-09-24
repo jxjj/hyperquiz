@@ -18,7 +18,7 @@ module.exports = () => ({
   entry: ['./src/index.js'],
   devtool: 'source-map',
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, './dist'),
   },
   module: {
