@@ -1,0 +1,71 @@
+.home-page {
+  min-height: 100%;
+  background: url("../img/bg-lines.svg") no-repeat 0% 90%,
+    url("../img/bg-shooting-stars.svg") no-repeat center center,
+    url("../img/tristars-bg.svg") no-repeat top center,
+    url("../img/bg-corner-nova.svg") no-repeat bottom right,
+    linear-gradient(90deg, #f5f05d 0%, #e572ff 100%);
+  background-size: auto, contain, cover, cover, cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page__page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 0 10vh;
+}
+.home-page__page-header .tristars {
+  display: block;
+  width: 10rem;
+  margin: 1rem;
+}
+
+.home-page .app-name {
+  color: #a528ff;
+  text-transform: uppercase;
+  font-size: 5rem;
+  text-shadow: -0.375rem 0 0 white;
+  font-style: italic;
+  margin: 0;
+  line-height: 0.9;
+}
+
+.app-name__logo {
+  width: 4.3rem;
+}
+
+.home-page .app-name .line:nth-of-type(2) {
+  padding-left: 0.666em;
+}
+
+.home-page .start-button {
+  font-style: italic;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 3rem;
+  background: linear-gradient(-90deg, #a528ff 50%, #e77df1 100%);
+  box-shadow: -0.25em 0.25em 0 0 #ffffff;
+  border-radius: 9px;
+  border: none;
+  max-width: 40rem;
+  margin: 2rem;
+}
+
+.home-page .start-button:active {
+  box-shadow: none;
+  transform: translate3d(-0.25em, 0.25em, 0);
+}
+.home-page .start-button:before,
+.home-page .start-button:after {
+  content: "";
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background: url("../img/angled-brackets.svg") no-repeat center bottom;
+  margin: 0 0.125em;
+  background-size: contain;
+}

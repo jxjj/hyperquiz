@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="214px" height="212px" viewBox="0 0 214 212" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Corner Nova</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Page" transform="translate(-161.000000, -455.000000)" fill="#A528FF">
+            <g id="Background" transform="translate(-75.000000, 0.000000)">
+                <g id="Corner-Nova" transform="translate(236.000000, 455.000000)">
+                    <circle id="Oval-3" fill-opacity="0.18919837" cx="186.5" cy="186.5" r="51.5"></circle>
+                    <circle id="Oval-3" fill-opacity="0.105157382" cx="165" cy="165" r="73"></circle>
+                    <circle id="Oval-3" fill-opacity="0.105157382" cx="145" cy="145" r="93"></circle>
+                    <circle id="Oval-3" fill-opacity="0.105157382" cx="119" cy="119" r="119"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

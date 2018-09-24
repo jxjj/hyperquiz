@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="229px" height="320px" viewBox="0 0 229 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Lines</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Home-Page" transform="translate(0.000000, -330.000000)" stroke-width="5">
+            <g id="Background" transform="translate(-75.000000, 0.000000)">
+                <g id="Lines" transform="translate(0.000000, 334.000000)">
+                    <g id="Purple-Lines" transform="translate(15.000000, 0.000000)" stroke="#FFFA00">
+                        <path d="M0.551666667,233.25 L234.279413,0.298757784" id="Line"></path>
+                        <path d="M13.595,255 L247.322746,22.0487578" id="Line-Copy"></path>
+                        <path d="M28.645,276.75 L262.372746,43.7987578" id="Line-Copy-2"></path>
+                        <path d="M40.685,298.5 L274.412746,65.5487578" id="Line-Copy-3"></path>
+                        <path d="M51.7216667,320.25 L285.449413,87.2987578" id="Line-Copy-4"></path>
+                    </g>
+                    <g id="Yellow-Lines" stroke="#BF50D5">
+                        <path d="M0.501666667,233.25 L234.229413,0.298757784" id="Line"></path>
+                        <path d="M13.545,255 L247.272746,22.0487578" id="Line-Copy"></path>
+                        <path d="M28.595,276.75 L262.322746,43.7987578" id="Line-Copy-2"></path>
+                        <path d="M40.635,298.5 L274.362746,65.5487578" id="Line-Copy-3"></path>
+                        <path d="M51.6716667,320.25 L285.399413,87.2987578" id="Line-Copy-4"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

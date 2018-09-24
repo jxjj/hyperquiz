@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="67px" height="55px" viewBox="0 0 67 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Hyper-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="81.6308671%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#3C0066" offset="0%"></stop>
+            <stop stop-color="#7014B2" offset="52.6517847%"></stop>
+            <stop stop-color="#A528FF" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="11.544 4 25.35 4 46.722 4 60.528 4 48.984 58.522 35.178 58.522 13.806 58.522 0 58.522"></polygon>
+        <filter x="-14.9%" y="-5.5%" width="119.8%" height="111.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="-6" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Page" transform="translate(-14.000000, -174.000000)">
+            <g id="HyperQuiz-WordMark" transform="translate(20.000000, 170.000000)">
+                <g id="Hyper-logo">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="102px" viewBox="0 0 160 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Page" transform="translate(-104.000000, -53.000000)">
+            <g id="Logo" transform="translate(-421.000000, -249.000000)">
+                <g id="Group" transform="translate(525.000000, 302.000000)">
+                    <g id="Pink-Star" transform="translate(113.000000, 55.000000)">
+                        <circle id="Oval" fill="#FFFA00" cx="23.5" cy="23.5" r="23.5"></circle>
+                        <polygon id="Star" fill="#FF5EE4" points="23.5 33.786405 11.0510297 40.2857143 13.4285714 26.5199564 3.35714286 16.7709925 17.2755148 14.7625955 23.5 2.23809524 29.7244852 14.7625955 43.6428571 16.7709925 33.5714286 26.5199564 35.9489703 40.2857143"></polygon>
+                    </g>
+                    <g id="Orange-Star" transform="translate(0.000000, 35.000000)">
+                        <ellipse id="Oval" fill="#FFFB27" cx="34" cy="33.5" rx="34" ry="33.5"></ellipse>
+                        <polygon id="Star" fill="#FF9E58" points="33 48.6048784 15.0770143 58 18.5 38.1008131 4 24.0081306 24.0385072 21.1048784 33 3 41.9614928 21.1048784 62 24.0081306 47.5 38.1008131 50.9229857 58"></polygon>
+                    </g>
+                    <g id="Purple-Star" transform="translate(43.000000, 0.000000)"></g>
+                    <circle id="Oval" fill="#A528FF" cx="86.5" cy="43.5" r="43.5"></circle>
+                    <polygon id="Star" fill="#FFFB27" points="87.6298701 62.6051273 64.9351805 74.5714286 69.2694805 49.2263957 50.9090909 31.2769437 76.2825253 27.5791532 87.6298701 4.51948052 98.977215 27.5791532 124.350649 31.2769437 105.99026 49.2263957 110.32456 74.5714286"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

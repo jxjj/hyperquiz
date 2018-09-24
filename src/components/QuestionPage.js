@@ -39,6 +39,9 @@ export default ({ match }) => (state) => {
 
   return (
     <div class="question-page">
+      <header className="app-bar">
+        <Link to="/">HyperQuiz</Link>
+      </header>
       <p>Score: {getScore(state)}</p>
       <h1>Question {match.params.num}</h1>
       <p>{category}</p>
