@@ -1,0 +1,12 @@
+.app-bar {
+  background: white;
+  color: #a528ff;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.app-bar__logo {
+  display: inline-block;
+  width: 0.9em;
+}

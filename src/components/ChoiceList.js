@@ -4,6 +4,8 @@ import getChoiceForQuestion from '../helpers/getChoiceForQuestion';
 import getCorrectAnswerForQuestion from '../helpers/getCorrectAnswerForQuestion';
 import Choice from './Choice';
 
+import './ChoiceList.css';
+
 export default ({ questionNum }) => (state, actions) => {
   const { choices } = state.questionPool[questionNum];
   const isComplete = isQuestionComplete(questionNum, state);

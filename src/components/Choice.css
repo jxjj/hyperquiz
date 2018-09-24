@@ -1,35 +1,39 @@
 .choice {
-  padding: 0.5rem;
-  font-size: 1rem;
-  background: transparent;
-  border: 1px solid #333;
+  --text-color: #a528ff;
+  --border: 0.125rem solid var(--text-color);
+  padding: 1rem;
+  font-size: 1.25rem;
+  background: white;
+  border: none;
+  border: var(--border);
+  color: var(--text-color);
   cursor: pointer;
 }
-.choice[disabled],
-.choice[disabled]:hover {
-  color: #ccc;
-  border-color: #ccc;
-  background: transparent;
-}
+
 .choice:hover {
-  background: #333;
+  background-color: var(--text-color);
   color: white;
+}
+.choice.is-selected,
+.choice.is-selected:hover,
+.choice.is-selected:disabled,
+.choice.is-selected:disabled:hover {
+  border-color: black;
+  border-width: 0.25rem;
+  background-color: white;
+  color: black;
 }
 
-.choice.is-selected,
-.choice.is-selected:hover {
-  background: yellow;
-  color: black;
-  border: 2px solid black;
-}
-.choice.is-incorrect,
-.choice.is-incorrect:hover {
-  background: red;
-  color: white;
+.choice:disabled,
+.choice:disabled:hover {
+  background-color: white;
+  color: var(--text-color);
 }
 
 .choice.is-correct,
-.choice.is-correct:hover {
-  background: green;
-  color: white;
+.choice.is-correct:hover,
+.choice.is-correct:disabled,
+.choice.is-correct:disabled:hover {
+  background: #00ff53;
+  color: black;
 }

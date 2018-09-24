@@ -32,7 +32,6 @@
   font-style: italic;
   margin: 0;
   line-height: 0.9;
-  border: 1px solid red;
 }
 
 .app-name__logo {
@@ -45,6 +44,7 @@
 }
 
 .home-page .start-button {
+  color: white;
   font-style: italic;
   font-weight: bold;
   text-transform: uppercase;

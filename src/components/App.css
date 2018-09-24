@@ -10,6 +10,7 @@ html,
 body,
 #app {
   height: 100%;
+  min-height: 100%;
   margin: 0;
   font-family: "Prompt", sans-serif;
   line-height: 1.4;
@@ -24,14 +25,16 @@ img {
 }
 
 button {
-  color: white;
   font-size: 1rem;
   padding: 0.5em;
-  background: black;
+  background: transparent;
   border: 0.125rem solid black;
-  box-shadow: -0.25rem 0.25rem 0 #fff;
 }
 button:active {
   box-shadow: 0;
   transform: translate(0.25rem, 0.25rem);
+}
+
+.container {
+  padding: 1rem;
 }
