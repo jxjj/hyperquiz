@@ -20,7 +20,8 @@
 .choice.is-selected:disabled:hover {
   border-color: black;
   border-width: 0.25rem;
-  background-color: white;
+  /* background-color: white; */
+  background: yellow;
   color: black;
 }
 
@@ -37,3 +38,11 @@
   background: #00ff53;
   color: black;
 }
+
+/* .choice.is-incorrect,
+.choice.is-incorrect:hover,
+.choice.is-incorrect:disabled,
+.choice.is-incorrect:disabled:hover {
+  background: #ff3939;
+  color: black;
+} */

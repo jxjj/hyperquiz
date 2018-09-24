@@ -41,10 +41,7 @@ export default ({ match }) => (state) => {
     return <p>Loading...</p>;
   }
 
-  const {
-    category, question, difficulty, choices,
-  } = questionItem;
-  const choice = getChoiceForQuestion(num, state);
+  const { category, question, difficulty } = questionItem;
   const isComplete = isQuestionComplete(num, state);
 
   return (
@@ -71,7 +68,7 @@ export default ({ match }) => (state) => {
           {/* Timer goes here */}
         </div>
 
-        <div class="question__status">{getStatusMessage(num, state)}</div>
+        {isComplete ? <div class="question__status">{getStatusMessage(num, state)}</div> : ''}
 
         <nav class="question__nav">{isComplete ? renderNextLink(num, state) : ''}</nav>
       </div>
