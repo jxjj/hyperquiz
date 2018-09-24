@@ -44,10 +44,5 @@ module.exports = () => ({
     ],
   },
   plugins,
-  devServer: {
-    publicPath: '/',
-    open: true,
-    historyApiFallback: true,
-  },
-  mode: 'development',
+  mode: 'production',
 });

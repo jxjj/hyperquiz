@@ -4,7 +4,7 @@
   "description": "Minimal web app",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "rm -rf build && webpack -p",
+    "build": "rm -rf dist && webpack -p --config webpack.config.prod.js",
     "deploy": "./scripts/gh_pages.sh",
     "lint": "eslint --fix ."
   },
