@@ -23,7 +23,7 @@ const renderNextLink = (questionNum, state) => {
   if (nextQuestionNum >= totalQuestions) {
     return <Link to="/results">See Results</Link>;
   }
-  return <Link to={`/q/${nextQuestionNum}`}>Next Question</Link>;
+  return <Link to={`/q/${nextQuestionNum}`}>Next</Link>;
 };
 
 const renderDifficulty = (difficulty) => {

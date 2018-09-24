@@ -90,3 +90,28 @@
     opacity: 1;
   }
 }
+
+.question__nav {
+  width: 100%;
+  text-align: right;
+}
+.question__nav a {
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: italic;
+  color: white;
+  font-size: 1.25rem;
+}
+.question__nav a:after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: url("../img/angled-brackets.svg") no-repeat center bottom;
+  background-size: contain;
+}
+.question__nav a:hover {
+  border-bottom: 0.125rem solid white;
+}
