@@ -8,13 +8,28 @@ import getCorrectAnswerForQuestion from '../helpers/getCorrectAnswerForQuestion'
 import isQuestionComplete from '../helpers/isQuestionComplete';
 
 import './QuestionPage.css';
+import getPointsForQuestion from '../helpers/getPointsForQuestion';
 
 const getStatusMessage = (questionNum, state) => {
   if (!isQuestionComplete(questionNum, state)) return '';
 
   const choice = getChoiceForQuestion(questionNum, state);
   const correctAnswer = getCorrectAnswerForQuestion(questionNum, state);
-  return choice === correctAnswer ? 'Correct!' : 'WRONG!';
+  const points = getPointsForQuestion(questionNum, state);
+  if (choice === correctAnswer) {
+    return (
+      <div class="status-message">
+        Correct!
+        <div class="points">+{points} points</div>
+      </div>
+    );
+  }
+  return (
+    <div class="status-message">
+      Wrong!
+      <p class="points">-{points} points</p>
+    </div>
+  );
 };
 
 const renderNextLink = (questionNum, state) => {
@@ -41,7 +56,9 @@ export default ({ match }) => (state) => {
     return <p>Loading...</p>;
   }
 
-  const { category, question, difficulty } = questionItem;
+  const {
+    category, question, difficulty, points,
+  } = questionItem;
   const isComplete = isQuestionComplete(num, state);
 
   return (
@@ -56,8 +73,10 @@ export default ({ match }) => (state) => {
           <h2 class="question__number">{match.params.num}</h2>
           <div class="question__main">
             <div class="question__meta">
-              <p class="question__category">{category}</p>
-              <p class="question__difficulty">{renderDifficulty(difficulty)}</p>
+              <p class="question__category">
+                {category} {renderDifficulty(difficulty)}{' '}
+              </p>
+              <p class="question__points">{points} Points</p>
             </div>
             <div class="question__prompt">{question}</div>
           </div>

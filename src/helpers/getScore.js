@@ -1,10 +1,10 @@
-export default (state) => {
-  const { questionPool, answers } = state;
+import getChoiceForQuestion from './getChoiceForQuestion';
+import getCorrectAnswerForQuestion from './getCorrectAnswerForQuestion';
+import getPointsForQuestion from './getPointsForQuestion';
 
-  // loop thru answers and tally up total points accumulated
-  return Object.keys(answers).reduce((acc, questionNum) => {
-    const choice = answers[questionNum];
-    const { correctAnswer } = questionPool[questionNum];
-    return correctAnswer === choice ? acc + 1 : acc;
-  }, 0);
-};
+export default state => Object.keys(state.answers).reduce((acc, questionNum) => {
+  const choice = getChoiceForQuestion(questionNum, state);
+  const correctAnswer = getCorrectAnswerForQuestion(questionNum, state);
+  const points = getPointsForQuestion(questionNum, state);
+  return correctAnswer === choice ? acc + points : acc;
+}, 0);

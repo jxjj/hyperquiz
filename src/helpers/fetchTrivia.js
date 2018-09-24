@@ -22,6 +22,13 @@ function camelCasedProps({ incorrect_answers, correct_answer, ...rest }) {
   };
 }
 
+function getPointsForDifficulty(difficulty) {
+  if (difficulty === 'easy') return 500;
+  if (difficulty === 'medium') return 1000;
+  if (difficulty === 'hard') return 2000;
+  return 1;
+}
+
 function normalizeTriviaItem(origItem) {
   // clean up data from API
   const item = pipe(
@@ -32,9 +39,13 @@ function normalizeTriviaItem(origItem) {
   // add randomized choices array
   const choices = shuffle([item.correctAnswer, ...item.incorrectAnswers]);
 
+  // add point values
+  const points = getPointsForDifficulty(item.difficulty);
+
   return {
     ...item,
     choices,
+    points,
   };
 }
 
