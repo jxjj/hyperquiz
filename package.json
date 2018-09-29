@@ -5,7 +5,7 @@
   "scripts": {
     "start:webpack": "webpack-dev-server",
     "start": "parcel src/index.html",
-    "build": "rm -rf dist .cache && parcel build src/index.html --out-dir dist --public-url '/hyperquiz'",
+    "build": "rm -rf dist .cache && parcel build src/index.html --out-dir dist --public-url '/hyperquiz' && workbox generateSW workbox-config.js",
     "deploy": "gh-pages -d dist",
     "lint": "eslint --fix ."
   },
@@ -39,6 +39,8 @@
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^2.0.0",
     "parcel-bundler": "^1.10.1",
-    "prettier": "^1.14.3"
+    "parcel-plugin-static-files-copy": "^1.2.3",
+    "prettier": "^1.14.3",
+    "workbox-cli": "^3.6.2"
   }
 }
