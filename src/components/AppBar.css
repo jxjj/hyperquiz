@@ -10,3 +10,7 @@
   display: inline-block;
   width: 0.9em;
 }
+.app-bar a {
+  color: #a528ff;
+  text-decoration: none;
+}

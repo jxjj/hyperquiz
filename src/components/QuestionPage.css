@@ -92,6 +92,7 @@
   text-align: center;
 }
 .status-message .points {
+  margin: 0;
   font-size: 1rem;
 }
 
