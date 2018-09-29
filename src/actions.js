@@ -35,7 +35,7 @@ export default {
     actions.location.go('/q/0');
   },
 
-  reset: () => ({ ...initialState }),
+  reset: () => initialState,
 
   saveState: () => ({ questionPool, answers }) => {
     try {

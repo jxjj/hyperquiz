@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import { app } from 'hyperapp';
 import { location } from '@hyperapp/router';
 import { withFx } from '@hyperapp/fx';
@@ -14,7 +15,7 @@ function onMount(main) {
 
 const main = pipe(
   devtools,
-  withFx,
+  // withFx,
 )(app)(state, actions, view, document.body);
 
 onMount(main);

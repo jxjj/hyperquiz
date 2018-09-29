@@ -1,8 +1,4 @@
 {
-  "presets": ["env"],
-  "plugins": [
-    "transform-object-rest-spread",
-    ["transform-react-jsx", { "pragma": "h" }],
-    ["transform-runtime", { "polyfill": false, "regenerator": true }]
-  ]
+  "presets": ["@babel/env", ["@babel/preset-react", { "pragma": "h" }]],
+  "plugins": ["@babel/plugin-syntax-object-rest-spread"]
 }
