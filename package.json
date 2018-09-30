@@ -5,7 +5,7 @@
   "scripts": {
     "start:webpack": "webpack-dev-server",
     "start": "parcel src/index.html",
-    "build": "rm -rf dist .cache && parcel build src/index.html --public-url ./ && workbox generateSW workbox-config.js",
+    "build": "rm -rf dist .cache && parcel build src/index.html --public-url / && workbox generateSW workbox-config.js",
     "deploy": "gh-pages -d dist",
     "lint": "eslint --fix ."
   },
